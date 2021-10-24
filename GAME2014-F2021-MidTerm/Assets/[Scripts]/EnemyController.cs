@@ -15,6 +15,8 @@ public class EnemyController : MonoBehaviour
         _CheckBounds();
     }
 
+
+    // Enemies will be constantly moving every frame on the y axis in between their boundaries
     private void _Move()
     {
         transform.position += new Vector3(0.0f, verticalSpeed * direction * Time.deltaTime, 0.0f);

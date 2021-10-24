@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour, IApplyDamage
     public float horizontalBoundary;
     public BulletManager bulletManager;
     public int damage;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,9 @@ public class BulletController : MonoBehaviour, IApplyDamage
         _CheckBounds();
     }
 
-    private void _Move()
+    private void _Move() // having the bullet move along the x axis each frame once shot out
     {
-        transform.position += new Vector3(0.0f, horizontalSpeed, 0.0f) * Time.deltaTime;
+        transform.position += new Vector3(horizontalSpeed, 0.0f, 0.0f) * Time.deltaTime;
     }
 
     private void _CheckBounds()

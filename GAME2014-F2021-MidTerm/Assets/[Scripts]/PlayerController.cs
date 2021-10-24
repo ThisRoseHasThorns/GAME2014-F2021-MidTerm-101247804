@@ -56,13 +56,13 @@ public class PlayerController : MonoBehaviour
         {
             var worldTouch = Camera.main.ScreenToWorldPoint(touch.position);
 
-            if (worldTouch.y > transform.position.y)
+            if (worldTouch.y > transform.position.y) //if the touch input is higher than the players current y position, bring the character higher
             {
                 // direction is positive
                 direction = 1.0f;
             }
 
-            if (worldTouch.y < transform.position.y)
+            if (worldTouch.y < transform.position.y) //if the touch input is lower than the players current y position, bring the character lower
             {
                 // direction is negative
                 direction = -1.0f;
